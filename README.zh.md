@@ -1,7 +1,7 @@
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/yylego/kratos-config/release.yml?branch=main&label=BUILD)](https://github.com/yylego/kratos-config/actions/workflows/release.yml?query=branch%3Amain)
 [![GoDoc](https://pkg.go.dev/badge/github.com/yylego/kratos-config)](https://pkg.go.dev/github.com/yylego/kratos-config)
 [![Coverage Status](https://img.shields.io/coveralls/github/yylego/kratos-config/main.svg)](https://coveralls.io/github/yylego/kratos-config?branch=main)
-[![Supported Go Versions](https://img.shields.io/badge/Go-1.24--1.25-lightgrey.svg)](https://github.com/yylego/kratos-config)
+[![Supported Go Versions](https://img.shields.io/badge/Go-1.25%2B-lightgrey.svg)](https://github.com/yylego/kratos-config)
 [![GitHub Release](https://img.shields.io/github/release/yylego/kratos-config.svg)](https://github.com/yylego/kratos-config/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/yylego/kratos-config)](https://goreportcard.com/report/github.com/yylego/kratos-config)
 
@@ -12,9 +12,11 @@
 ---
 
 <!-- TEMPLATE (ZH) BEGIN: LANGUAGE NAVIGATION -->
+
 ## 英文文档
 
 [ENGLISH README](README.md)
+
 <!-- TEMPLATE (ZH) END: LANGUAGE NAVIGATION -->
 
 ## 特性
@@ -42,7 +44,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 	"github.com/yylego/kratos-config/configkratos"
 	"github.com/yylego/must"
 	"github.com/yylego/rese"
@@ -80,7 +82,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 	"github.com/yylego/kratos-config/configkratos"
 	"github.com/yylego/must"
 	"github.com/yylego/rese"
@@ -127,7 +129,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 	"github.com/yylego/kratos-config/configkratos"
 	"github.com/yylego/must"
 	"github.com/yylego/rese"
@@ -162,6 +164,7 @@ port: 5432`)
 ### DataSource（动态配置）
 
 **创建数据源**
+
 ```go
 // 通用函数，指定格式参数
 source := configkratos.NewDataSource(data, "json")
@@ -172,6 +175,7 @@ yamlSource := configkratos.NewYamlSource(data)
 ```
 
 **更新配置**
+
 ```go
 newData := []byte(`{"key":"new-value"}`)
 err := source.Update(newData)
@@ -180,6 +184,7 @@ err := source.Update(newData)
 ### DataStatic（静态配置）
 
 **创建静态源**
+
 ```go
 // 通用函数，指定格式参数
 source := configkratos.NewDataStatic(data, "yaml")

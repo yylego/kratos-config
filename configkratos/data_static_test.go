@@ -3,7 +3,7 @@ package configkratos_test
 import (
 	"testing"
 
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 	"github.com/stretchr/testify/require"
 	"github.com/yylego/kratos-config/configkratos"
 	"github.com/yylego/must"
